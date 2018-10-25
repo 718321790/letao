@@ -1,0 +1,88 @@
+.app {
+  width: 100%;
+  padding-left: 180px;
+  transition: all 1s linear;
+}
+.app a,
+.app a:hover,
+.app a:active {
+  text-decoration: none;
+}
+.app.active {
+  padding-left: 0;
+}
+.app-left {
+  transition: all 1s linear;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 100%;
+  background-color: #222D32;
+  z-index: 999;
+}
+.app-left.active {
+  left: -180px;
+}
+.app-left .brand a {
+  display: block;
+  font-size: 24px;
+  text-align: center;
+  width: 180px;
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  background-color: #367fa9;
+}
+.app-left .user {
+  width: 180px;
+  height: 150px;
+}
+.app-left .user img {
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 30px auto 0;
+}
+.app-left .user p {
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+}
+.app-left .nav a {
+  display: block;
+  padding-left: 40px;
+  color: #ccc;
+  height: 40px;
+  line-height: 40px;
+  border: 3px solid transparent;
+}
+.app-left .nav a.active {
+  border-left-color: #069;
+  background-color: #1d1f21;
+  color: #fff;
+}
+.app-left .nav .child a {
+  padding-left: 60px;
+}
+.app-right {
+  width: 100%;
+  height: 500px;
+}
+.app-right .top-bar {
+  background-color: #3c8dbc;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.app-right .top-bar a {
+  display: block;
+  color: #fff;
+  height: 100%;
+  line-height: 50px;
+  padding: 0 20px;
+  font-size: 16px;
+}
