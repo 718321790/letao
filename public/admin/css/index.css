@@ -85,7 +85,10 @@
   padding: 0 20px;
   font-size: 16px;
 }
+.app-right .breadcrumb .active {
+  color: #777;
+}
 .app-right .content .pic {
-  width: 50%;
+  width: 45%;
   height: 400px;
 }
