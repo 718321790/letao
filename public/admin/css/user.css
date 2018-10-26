@@ -1,0 +1,8 @@
+.content .table-bordered th {
+  font-weight: normal;
+}
+.content .table-bordered td,
+.content .table-bordered th {
+  text-align: center;
+  vertical-align: middle;
+}
