@@ -1,3 +1,6 @@
+.mb-20 {
+  margin-bottom: 20px;
+}
 .app {
   width: 100%;
   padding-left: 180px;
@@ -91,4 +94,12 @@
 .app-right .content .pic {
   width: 45%;
   height: 400px;
+}
+.app-right .content .table-bordered th {
+  font-weight: normal;
+}
+.app-right .content .table-bordered td,
+.app-right .content .table-bordered th {
+  text-align: center;
+  vertical-align: middle;
 }
