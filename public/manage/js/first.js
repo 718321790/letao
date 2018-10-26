@@ -23,7 +23,7 @@ $(function () {
         $("tbody").html( template("tpl", info) );
 
         //渲染分页
-        $("#paginator").bootstrapPaginator({
+        $("#pagintor").bootstrapPaginator({
           bootstrapMajorVersion:3,
           currentPage:currentPage,
           totalPages:Math.ceil(info.total/pageSize),
