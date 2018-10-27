@@ -66,7 +66,7 @@
                     <li class="active">商品管理</li>
                 </ol>
                 <div class="content">
-                    <button class="btn btn-default mb-20" data-toggle="modal" data-target="#categoryModal">添加商品</button>
+                    <button class="btn btn-addProduct btn-default mb-20" data-toggle="modal" data-target="#addProductModal">添加商品</button>
                     <table class="table table-bordered table-striped">
                         <thead>
                             <tr>
@@ -122,6 +122,88 @@
     </div>
     <!-- /.modal -->
 
+    <!-- 模态框 ，添加商品按钮 -->
+    <div class="modal fade" id="addProductModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"></button>
+                        <h4 class="modal-title">添加商品</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="form-group">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                                    <span class="chosen">请选择二级分类</span>
+                                    <span class="caret"></span>
+                                </button>
+                                <input type="hidden" name="brandId">
+                                <ul class="dropdown-menu">
+                                    <!-- <li>
+                                        <a href="javascript:;">Action</a>
+                                    </li> -->
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input autocomplete="off" type="text" name="proName" class="form-control" placeholder="请输入商品名称">
+                        </div>
+
+                        <div class="form-group">
+                            <textarea rows="3" autocomplete="off" name="proDesc" class="form-control" placeholder="请输入商品描述"></textarea>
+                        </div>
+
+                        <!-- 上下架状态 -->
+                        <div class="form-group">
+                            <input type="hidden" name="statu" value="1">
+                        </div>
+
+                        <div class="form-group">
+                            <input autocomplete="off" type="text" name="num" class="form-control" placeholder="请输入商品库存">
+                        </div>
+
+                        <div class="form-group">
+                            <input autocomplete="off" type="text" name="size" class="form-control" placeholder="请输入商品的尺码(32-46)">
+                        </div>
+
+                        <div class="form-group">
+                            <input autocomplete="off" type="text" name="oldPrice" class="form-control" placeholder="请输入商品的原价">
+                        </div>
+
+                        <div class="form-group">
+                            <input autocomplete="off" type="text" name="price" class="form-control" placeholder="请输入商品的价格">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="file" class="btn btn-default ">上传图片</label>
+                            <input type="file" data-url="/product/addProductPic" style="display: none" multiple name="pic1" id="file">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="hidden" name="brandLogo">
+                            <div class="img-box">
+                                <!-- <img src="" class="myImg" width="100" height="100" alt="">
+                                <img src="" class="myImg" width="100" height="100" alt="">
+                                <img src="" class="myImg" width="100" height="100" alt="">   -->
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="submit" class="btn btn-primary addCategory">添加</button>
+                    </div>
+                </form>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
     <script type="text/template" id="tmp">
         {{each rows v i}}
             <tr>
@@ -133,6 +215,14 @@
                 <td>已上架</td>
                 <td><button class="btn btn-danger btn-sm">下架</button></td>
             </tr>
+        {{/each}}
+    </script>
+
+    <script type="text/template" id="tmp1">
+        {{each rows v i}}
+            <li data-id="{{ v.id }}">
+                <a href="javascript:;">{{ v.brandName }}</a>
+            </li>
         {{/each}}
     </script>
 
