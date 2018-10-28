@@ -106,14 +106,18 @@
     </script>
 
     <script type="text/template" id="tmp1">
-        {{each rows v i}}
-            <li>
-                <a href="#">
-                    <img src="{{ v.brandLogo }}">
-                    <p>{{ v.brandName }}</p>
-                </a>
-            </li>
-        {{/each}}
+        {{ if rows.length === 0 }}
+            <p>数据为空</p>
+        {{else}}
+            {{each rows v i}}
+                <li>
+                    <a href="#">
+                        <img src="{{ v.brandLogo }}">
+                        <p>{{ v.brandName }}</p>
+                    </a>
+                </li>
+            {{/each}}
+        {{/if}}
     </script>
 
     <script src="./lib/zepto/zepto.min.js"></script>
