@@ -1,0 +1,26 @@
+.lt-main {
+  position: relative;
+  height: 100%;
+}
+.lt-history {
+  padding: 10px;
+  font-size: 12px;
+  color: #666;
+}
+.lt-history .title span {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+}
+.lt-history .content li {
+  border: 1px dashed red;
+  padding-left: 10px;
+  height: 30px;
+  line-height: 28px;
+}
+.lt-history .content li span {
+  line-height: 28px;
+}
+.lt-history .content li:not(:first-child) {
+  border-top: none;
+}
