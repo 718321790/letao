@@ -1,0 +1,19 @@
+.lt-sort {
+  height: 30px;
+  line-height: 30px;
+  background-color: #eee;
+  padding: 0 10px;
+}
+.lt-sort li {
+  float: left;
+  width: 25%;
+  font-size: 12px;
+}
+.lt-sort li.active a {
+  color: orange;
+}
+.lt-sort li a {
+  color: #666;
+  display: block;
+  text-align: center;
+}
