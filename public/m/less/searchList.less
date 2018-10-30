@@ -1,3 +1,5 @@
+@mainColor: #069;
+
 .lt-sort{
     height: 30px;
     line-height: 30px;
@@ -16,5 +18,26 @@
             text-align: center;
             
         }
+    }
+}
+
+.loading{
+    width: 40px;
+    height: 40px;
+    border: 3px solid @mainColor;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+    transition: all 1s;
+    animation: play 1s ease-in-out infinite;
+}
+@keyframes play{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
     }
 }
