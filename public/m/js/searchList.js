@@ -2,7 +2,7 @@
  * @Author: lu-yijun 
  * @Date: 2018-10-30 10:57:08 
  * @Last Modified by: lu-yijun
- * @Last Modified time: 2018-10-30 10:57:35
+ * @Last Modified time: 2018-10-31 21:28:18
  */
 $(function(){
 
@@ -27,16 +27,15 @@ $(function(){
             url: '/product/queryProduct',
             data: data,
             beforeSend: function(){
+                $('.lt-product').html('')
                 $('.loading').show()
             },
             success: function(info){
                 console.log(info)
-                
-                $('.lt-product').html(template('tmp',info))
-            },
-            complete:function(){
-                
-                $('.loading').hide()                
+                setTimeout(function(){
+                    $('.loading').hide()  
+                    $('.lt-product').html(template('tmp',info))
+                },1000) 
             }
         })
     }
